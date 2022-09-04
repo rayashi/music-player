@@ -1,0 +1,31 @@
+.control-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+button {
+  height: 40px;
+  width: 40px;
+  background-color: #e02941;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.play-button {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+}
+.play-button * {
+  margin-left: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
