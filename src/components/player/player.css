@@ -1,3 +1,14 @@
+.player {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 7px 29px 0px;
+}
+
+.controls {
+}
+
 .control-buttons {
   display: flex;
   flex-direction: row;
@@ -9,7 +20,7 @@
 button {
   height: 40px;
   width: 40px;
-  background-color: #e02941;
+  background-color: #282828;
   border: none;
   border-radius: 100%;
   color: white;
@@ -22,10 +33,17 @@ button {
   width: 50px;
   font-size: 30px;
 }
+
 .play-button * {
   margin-left: 4px;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: black;
+  box-shadow: rgba(48, 48, 48, 0.4) 0px 2px 15px 0px;
+}
+
+.control-progress input {
+  width: 100%;
 }

@@ -8,13 +8,23 @@ import {
   faShuffle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Controls = () => {
+const Controls = ({
+  duration,
+  progress,
+  isPlaying,
+  onPlayPause,
+  onTimeChange,
+}) => {
   return (
     <div className="controls">
       <div className="control-progress">
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" />
-        </div>
+        <input
+          type="range"
+          min={0}
+          max={duration}
+          value={progress}
+          onChange={onTimeChange}
+        />
       </div>
       <div className="control-buttons">
         <button>
@@ -23,8 +33,12 @@ const Controls = () => {
         <button>
           <FontAwesomeIcon icon={faBackward} />
         </button>
-        <button className="play-button">
-          <FontAwesomeIcon icon={faPlay} />
+        <button className="play-button" onClick={onPlayPause}>
+          {isPlaying ? (
+            <FontAwesomeIcon icon={faPause} />
+          ) : (
+            <FontAwesomeIcon icon={faPlay} />
+          )}
         </button>
         <button>
           <FontAwesomeIcon icon={faForward} />

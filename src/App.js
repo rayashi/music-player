@@ -4,7 +4,7 @@ import Player from "./components/player/player";
 function App() {
   return (
     <div className="App">
-      <Player />
+      <Player source="https://beardbarnmusicbucket.s3.amazonaws.com/The+Wild+Horse" />
     </div>
   );
 }
