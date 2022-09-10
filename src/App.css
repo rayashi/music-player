@@ -1,8 +1,12 @@
+button {
+  background-color: transparent;
+}
+
 .App {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(28, 28, 28);
+  background-color: #46527e;
 }

@@ -1,0 +1,14 @@
+.progress-bar-wrapper {
+  width: 100%;
+  height: 5px;
+  background-color: #9999b9;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.progress-bar-inner {
+  border-radius: 5px;
+  box-shadow: #fc846c99 0px -1px 10px 0px;
+  background-image: linear-gradient(to right, #6064f5, #fc836c);
+  height: 5px;
+}

@@ -7,6 +7,7 @@ import {
   faRepeat,
   faShuffle,
 } from "@fortawesome/free-solid-svg-icons";
+import ProgressBar from "../progress-bar/progress-bar";
 
 const Controls = ({
   duration,
@@ -18,13 +19,7 @@ const Controls = ({
   return (
     <div className="controls">
       <div className="control-progress">
-        <input
-          type="range"
-          min={0}
-          max={duration}
-          value={progress}
-          onChange={onTimeChange}
-        />
+        <ProgressBar value={progress} />
       </div>
       <div className="control-buttons">
         <button>

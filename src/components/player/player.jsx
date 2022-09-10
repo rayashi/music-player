@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Controls from "./controls";
 import "./player.css";
 
-const Player = ({ source }) => {
+const Player = ({ source, meta }) => {
   const [duration, setDuration] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -30,8 +30,15 @@ const Player = ({ source }) => {
       <audio
         src={source}
         ref={audioRef}
-        onTimeUpdate={() => setProgress(audioRef.current?.currentTime)}
+        onTimeUpdate={() =>
+          setProgress(
+            (audioRef.current?.currentTime / audioRef.current?.duration) * 100
+          )
+        }
       />
+      <img className="music-image" src={meta.image} alt="Album" />
+      <h3 className="music-title">{meta.name}</h3>
+      <h5 className="music-artist">{meta.artist}</h5>
       <Controls
         {...{
           duration,
